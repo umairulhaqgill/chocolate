@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cake Box</title>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">    
+<script src="cake_js.js"></script>
+</head>
+<body>
+
+<h1>Cake Box</h1>
+<p>Test Cake Box Library</p>
+    <div style="width: 500px; height:510px; border:1px solid #ccc;">
+        <div class="cake_box"></div>
+    </div>
+    <div style="border:1px solid #ccc;">
+        <div class="cake_box2"></div>
+    </div>
+    <script type="text/javascript">
+
+        var layer_details   =   {
+                                    image:'boxes/4x4.png'   
+                                };
+        var layers = {
+                        'layer1':{'title':'Layer 1','layer_details':layer_details},         
+                        'layer2':{'title':'Layer 2','layer_details':layer_details},
+                        'layer3':{'title':'Layer 3','layer_details':layer_details}  
+                     };
+        
+        var options =   {
+                            layers: layers,
+                            active_layer: 1,  
+                            area: 400,
+                            shape:'4x4'
+                        }; 
+
+        var options2 =   {
+                            layers: layers,
+                            active_layer: 1,  
+                            area: 800,
+                            shape:'4x4'
+                        };
+        
+        $('.cake_box').epicModule(options);  
+        $('.cake_box2').epicModule(options2);     
+    </script>
+</body>
+</html>
